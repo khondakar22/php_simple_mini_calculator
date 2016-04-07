@@ -38,32 +38,32 @@
                     </td>
 
                 </tr>
-
-                <tr>
-                    <td>Result</td>
-                    <td> <?php
+<?php
                         if (isset($_POST['btn'])) {
                             if ($_POST['btn'] == '+') {
-                                echo $_POST['first_number'] + $_POST['second_number'];
+                                $result=$_POST['first_number'] + $_POST['second_number'];
                             } elseif ($_POST['btn'] == '-') {
-                                echo $_POST['first_number'] - $_POST['second_number'];
+                                $result= $_POST['first_number'] - $_POST['second_number'];
                             } elseif ($_POST['btn'] == '/') {
                                 if ($_POST['second_number'] == 0) {
-                                    echo 'Undefine';
+                                    $result='Undefine';
                                 } else {
-                                    echo $_POST['first_number'] / $_POST['second_number'];
+                                    $result=$_POST['first_number'] / $_POST['second_number'];
                                 }
                             } elseif ($_POST['btn'] == '*') {
-                                echo $_POST['first_number'] * $_POST['second_number'];
+                                $result=$_POST['first_number'] * $_POST['second_number'];
                             } else {
                                 if ($_POST['second_number'] == 0) {
-                                    echo 'Undefine';
+                                    $result='Undefine';
                                 } else {
-                                    echo $_POST['first_number'] % $_POST['second_number'];
+                                    $result=$_POST['first_number'] % $_POST['second_number'];
                                 }
                             }
                         }
-                        ?> </td>
+                        ?>
+                <tr>
+                    <td>Result</td>
+                    <td><?php echo $result;?>  </td>
                 </tr>
 
 
